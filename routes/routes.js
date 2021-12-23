@@ -3,7 +3,7 @@ const model=require('../model/model')
 const router=express.Router()
 
 router.get('/',(req,res)=>{
-    res.render('home')
+    res.render('main')
 })
 
 router.get('/api', async (req,res)=>{
