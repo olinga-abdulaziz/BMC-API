@@ -2,8 +2,11 @@ const express=require('express')
 const model=require('../model/model')
 const router=express.Router()
 
+router.get('/',(req,res)=>{
+    res.render('home')
+})
 
-router.get('/', async (req,res)=>{
+router.get('/api', async (req,res)=>{
     
     try {
         const mydata=await model.find()
