@@ -6,7 +6,7 @@ const bodyparser=require('body-parser')
 const dbconnection=require('./config/db')
 const routers=require('./routes/routes')
 const { engine }=require('express-handlebars')
-
+const cors=require('cors')
 const app=express()
 
 // loading dotenv
@@ -17,6 +17,8 @@ dbconnection()
 
 
 // midlewares
+app.use(cors())
+
 app.engine('hbs',engine({
     extname:'.hbs',
     defaultLayout:'main',
