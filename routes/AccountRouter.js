@@ -20,8 +20,8 @@ router.get('/:id', async (req,res)=>{
     } catch (err) {
         console.log(err);
     }
-  
 })
+
 
 // deposit 
 router.post('/deposit',async (req,res)=>{
