@@ -13,6 +13,16 @@ router.get('/', async (req,res)=>{
   
 })
 
+router.get('/:id', async (req,res)=>{
+    try {
+        const accounts=await Account.findById({member:req.params.id})
+        res.json(accounts)
+    } catch (err) {
+        console.log(err);
+    }
+  
+})
+
 // deposit 
 router.post('/deposit',async (req,res)=>{
 
