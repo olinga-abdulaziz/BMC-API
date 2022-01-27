@@ -1,7 +1,7 @@
 const dotenv=require('dotenv')
 const datetime=require('node-datetime')
 const axios=require('axios')
-dotenv.config({path:'./config/config.env'})
+dotenv.config()
 
 const consumerkey=process.env.consumerkey
 const consumersecrete=process.env.consumersecrete

@@ -3,7 +3,7 @@ const morgan=require('morgan')
 const dotenv=require('dotenv')
 const path=require('path')
 const bodyparser=require('body-parser')
-const dbconnection=require('./config/db')
+const dbconnection=require('./db')
 const routers=require('./routes/routes')
 const mpesa=require('./routes/mpesa')
 const memberRouter=require('./routes/memberRouter')
@@ -13,7 +13,7 @@ const cors=require('cors')
 const app=express()
 
 // loading dotenv
-dotenv.config({path:'./config/config.env'})
+dotenv.config()
 
 // loading db
 dbconnection()
